@@ -8,6 +8,7 @@ public class Validation {
     String fname;
     String lname;
     String mail;
+    String phno;
     Scanner sc =  new Scanner(System.in);
     public Validation(){
         this.fname = fname;
@@ -63,12 +64,31 @@ public class Validation {
         }
     }
 
+    public void validPhno(){
+        System.out.println("Enter the Phone Number: ");
+
+        for(int i=0;;i++){
+            phno = sc.nextLine();
+            Pattern p1 = Pattern.compile("^[+]{1}\\d{2} \\d{10}$");
+            Matcher m1 = p1.matcher(phno);
+            if(m1.matches()){
+                System.out.println("Phno got Validated");
+                break;
+            }
+            else{
+                System.out.println("Not Validated! Enter again");
+            }
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Validation{" +
                 "fname='" + fname + '\'' +
                 ", lname='" + lname + '\'' +
                 ", mail='" + mail + '\'' +
+                ", Phno='" + phno + '\'' +
                 '}';
     }
 }

@@ -11,6 +11,7 @@ public class reg {
         v1.validFirst();
         v1.validLast();
         v1.validMail();
+        v1.validPhno();
         System.out.println(v1);
     }
 }
