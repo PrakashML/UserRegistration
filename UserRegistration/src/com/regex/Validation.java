@@ -9,6 +9,7 @@ public class Validation {
     String lname;
     String mail;
     String phno;
+    String Pass;
     Scanner sc =  new Scanner(System.in);
     public Validation(){
         this.fname = fname;
@@ -81,6 +82,23 @@ public class Validation {
         }
 
     }
+    public void validPWord(){
+        System.out.println("Enter Password: ");
+
+        for(int i=0;;i++){
+            Pass = sc.nextLine();
+            Pattern p1 = Pattern.compile("^[a-zA-Z0-9!@#$%^&*_+]{8,}$");
+            Matcher m1 = p1.matcher(Pass);
+            if(m1.matches()){
+                System.out.println("PassWord got Validated");
+                break;
+            }
+            else{
+                System.out.println("Not Validated! Enter again");
+            }
+        }
+
+    }
 
     @Override
     public String toString() {
@@ -89,6 +107,7 @@ public class Validation {
                 ", lname='" + lname + '\'' +
                 ", mail='" + mail + '\'' +
                 ", Phno='" + phno + '\'' +
+                ", Password='" + Pass + '\'' +
                 '}';
     }
 }

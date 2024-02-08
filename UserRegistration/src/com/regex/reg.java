@@ -12,6 +12,7 @@ public class reg {
         v1.validLast();
         v1.validMail();
         v1.validPhno();
+        v1.validPWord();
         System.out.println(v1);
     }
 }
