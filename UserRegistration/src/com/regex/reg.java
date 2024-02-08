@@ -10,5 +10,7 @@ public class reg {
         Validation v1 = new Validation();
         v1.validFirst();
         v1.validLast();
+        v1.validMail();
+        System.out.println(v1);
     }
 }
