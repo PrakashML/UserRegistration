@@ -27,4 +27,21 @@ public class Validation {
         }
     }
 
+    public void validLast(){
+        System.out.println("Enter the last name: ");
+        for(int i=0;;i++){
+            String lname = sc.next();
+            Pattern p1 = Pattern.compile("[A-Z]{1}[a-z]{2}[a-z]+$");
+            Matcher m1 = p1.matcher(lname);
+            if(m1.matches()){
+                System.out.println("Name got validated");
+                break;
+            }
+            else{
+                System.out.println("Input not valid, Enter again!");
+            }
+        }
+
+    }
+
 }

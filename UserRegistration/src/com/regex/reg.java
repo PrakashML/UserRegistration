@@ -9,5 +9,6 @@ public class reg {
     public static void main(String[] args) {
         Validation v1 = new Validation();
         v1.validFirst();
+        v1.validLast();
     }
 }
