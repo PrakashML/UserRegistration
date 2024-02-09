@@ -8,10 +8,10 @@ import java.lang.reflect.ParameterizedType;
 public class reg {
     public static void main(String[] args) {
         Validation v1 = new Validation();
-        v1.validFirst();
-        v1.validLast();
-        v1.validMail();
-        v1.validPhno();
+//        v1.validFirst();
+//        v1.validLast();
+//        v1.validMail();
+//        v1.validPhno();
         v1.validPWord();
         System.out.println(v1);
     }
