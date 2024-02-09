@@ -87,7 +87,7 @@ public class Validation {
 
         for(int i=0;;i++){
             Pass = sc.nextLine();
-            Pattern p1 = Pattern.compile("^(?=.*[A-Z][0-9])[A-Za-z0-9!@#$%^&*_+]{8,}$");
+            Pattern p1 = Pattern.compile("^((?=.*[A-Z][0-9])(?=.*[!@#$%^&*].{1})).{8,}$");
             Matcher m1 = p1.matcher(Pass);
             if(m1.matches()){
                 System.out.println("PassWord got Validated");
